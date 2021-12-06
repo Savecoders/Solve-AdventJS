@@ -26,8 +26,6 @@
 */
 
 const acDay = new Date('Jan 1, 2022 00:00:01');
-const daysToXmas = (data) =>
-	25 - (data.getMonth() === 11 ? data.getDate() : 31 + data.getDate());
-
-const day = daysToXmas(acDay);
+const daysToXmas = (date) => Math.ceil((new Date('Dec 25, 2021') - date) / 86_400_000);
+console.log(daysToXmas(acDay));
 export default daysToXmas;
