@@ -23,11 +23,23 @@
 
 */
 
-const maxProfit = (prices) => {
+/* const maxProfit = (prices) => {
 	const leftPrices = prices.slice(0, Math.round(prices.length / 2));
 	const rightPrices = prices.slice(Math.round(prices.length / 2), prices.length);
 	const profitOfDay = Math.max(...rightPrices) - Math.min(...leftPrices);
 	return profitOfDay > 0 ? profitOfDay : -1;
+}; */
+
+const maxProfit = (prices) => {
+	const reducer = (accumulador, price, index) => [
+		...accumulador,
+		Math.max(...prices.slice(index + 1)) - price,
+	];
+	const profit = prices
+		.reduce(reducer, [])
+		.sort((a, b) => b - a)
+		.at(0);
+	return profit || -1;
 };
 
 const pricesBtc = [39, 18, 29, 25, 34, 32, 5];
