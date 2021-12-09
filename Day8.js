@@ -29,17 +29,14 @@
 	const profitOfDay = Math.max(...rightPrices) - Math.min(...leftPrices);
 	return profitOfDay > 0 ? profitOfDay : -1;
 }; */
+//optimiazando, para no usar el destructuring uso el .apply(null, prices.slice(index + 1))
 
 const maxProfit = (prices) => {
-	const reducer = (accumulador, price, index) => [
-		...accumulador,
-		Math.max(...prices.slice(index + 1)) - price,
-	];
-	const profit = prices
-		.reduce(reducer, [])
-		.sort((a, b) => b - a)
-		.at(0);
-	return profit || -1;
+	const profit = (acc, price, index) => {
+		const priceSlice = Math.max.apply(null, prices.slice(index + 1)) - price;
+		return acc > priceSlice ? acc : priceSlice;
+	};
+	return prices.reduce(profit, 0) || -1;
 };
 
 const pricesBtc = [39, 18, 29, 25, 34, 32, 5];
