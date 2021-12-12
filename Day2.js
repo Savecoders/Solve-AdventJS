@@ -28,6 +28,5 @@ const listGifts = (letter) => {
 	});
 	return objGifts;
 };
-export default listGifts;
 const regalos = listGifts('bici coche balón _playstation bici coche peluche');
 console.log(regalos);
