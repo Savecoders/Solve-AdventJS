@@ -3,8 +3,8 @@
 
 function wrapping(gifts) {
   return gifts.map(gift => {
-    let giftWrap = `\n*${gift}*\n`
-    let wrap = "*".repeat(gift.length + 2)
+    const giftWrap = `\n*${gift}*\n`
+    const wrap = "*".repeat(gift.length + 2)
     return `${wrap}\n*${giftWrap}*\n${wrap}`
   })
 }
@@ -18,4 +18,4 @@ function wrapping(gifts) {
 */
 
 const gifts = ['book', 'game', 'socks', "midu"]
-const wrapped = wrapping(gifts)
+console.log(wrapping(gifts))
