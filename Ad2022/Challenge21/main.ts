@@ -34,3 +34,5 @@ function printTable(gifts: { name: string; quantity: number }[]) {
     .join("");
   return top + header + divider + body + bottom;
 }
+
+export { printTable };

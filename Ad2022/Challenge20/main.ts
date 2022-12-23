@@ -26,7 +26,7 @@ function howManyReindeers(
       .sort((a, b) => b.weightCapacity - a.weightCapacity);
 
     let sumCapacity: number = filterReindeer.reduce(
-      (acc, { weightCapacity }) => acc + weightCapacity,
+      (acc, { weightCapacity }: ReindeerType) => acc + weightCapacity,
       0,
     );
 
