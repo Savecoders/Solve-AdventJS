@@ -48,6 +48,8 @@ function executeCommands(commands: string[]): number[] {
   return cpu;
 }
 
+export { executeCommands };
+
 console.log(executeCommands([
   "MOV 5,V00", // V00 es 5
   "MOV 10,V01", // V01 es 10
