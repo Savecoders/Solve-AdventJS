@@ -8,7 +8,6 @@ Actualemente AdventJS tiene 2 versiones, 2021 y 2022
 Cada una de ellas consta de 24 ejercicios, entre las siguientes categorias:
 
  **Dificultad**: 🟢 Facil 🟠 Media 🔴 Dificil 🟣 Muy Dificil
-
 ### 🕹️ Challenges AdventJS2022
 
 |  #  |                Challenge                 | Dificultad|                   Descripción                   |             Solucion              |
