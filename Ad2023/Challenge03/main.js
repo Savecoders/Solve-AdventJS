@@ -4,3 +4,4 @@ function findNaughtyStep(original, modified) {
   for (i = 0; original.at(i) === modified.at(i); i++);
   return (modified.length > original.length ? modified : original).at(i);
 }
+findNaughtyStep("abcdef", "abqdef"); // "q"

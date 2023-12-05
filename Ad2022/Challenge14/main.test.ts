@@ -1,6 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 
-import { getOptimalPath } from "./main.ts";
+import { getOptimalPath } from "./main";
 
 Deno.test("Day 2022-14-01", () =>
   assertEquals(
