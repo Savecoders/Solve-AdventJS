@@ -18,11 +18,11 @@
   [{ name: 'Navidad', color: 'rojo' },{ name: 'Ki Na Ma', color: 'rojo' }]
 */
 const contarOvejas = (ovejas) =>
-	ovejas.filter(
-		({ name, color }) =>
-			color === 'rojo' &&
-			name.toLocaleLowerCase().includes('a') &&
-			name.toLocaleLowerCase().includes('n')
-	);
+  ovejas.filter(
+    ({ name, color }) =>
+      color === "rojo" &&
+      name.toLocaleLowerCase().includes("a") &&
+      name.toLocaleLowerCase().includes("n")
+  );
 
 export default contarOvejas;
